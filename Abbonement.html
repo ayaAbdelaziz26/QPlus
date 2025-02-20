@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/Abbonement.css">
+    <link href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" rel="stylesheet">
+    <link href="https://cdn-uicons.flaticon.com/uicons-rounded-solid/css/uicons-rounded-solid.css" rel="stylesheet">
+    <link href="https://cdn-uicons.flaticon.com/uicons-rounded-bold/css/uicons-rounded-bold.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2><span class="Q">Q</span> <span class="plus">PLUS</span></h2>
+        <div class="close-sidebar"><i class="fa-solid fa-chevron-left"></i></div>
+        <ul>
+            <li onclick="location.href='Accueil.html'"><i class="fi fi-rr-layout-fluid"></i><span>Accueil</span></li>
+            <li onclick="location.href='Profile.html'"><i class="fi fi-rr-user-pen"></i><span> Profile</span></li>
+            <li onclick="location.href='Notes.html'"><i class="fi fi-rr-edit"></i><span> Notes</span></li>
+            <li onclick="location.href='Statistiques.html'"><i
+                    class="fi fi-rr-chart-histogram"></i><span>Statistiques</span></li>
+            <li class="active"><i class="fi fi-rr-memo-pad"></i><span>Abonnement</span></li>
+            <li onclick="location.href='Support.html'"><i class="fi fi-rr-headset"></i><span>Support</span></li>
+            <li class="logout" onclick="window.location='index.html'"><i class="fi fi-rr-sign-out-alt"></i><span>Logout</span></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <i class="fi fi-rr-bell notification"></i>
+            <div class="settings">
+                <i class="fi fi-rr-brightness"></i>
+                <div class="user">
+                    <i class="fi fi-rr-user"></i>
+                </div>
+            </div>
+        </header>
+
+        <h2>Activation de votre compte</h2>
+        <div class="container">
+            <div class="site-activation" id="site">
+                <h3>Activer dans le site</h3>
+                <div class="steps">
+                    <div class="step active">1</div>
+                    <div class="step">2</div>
+                    <div class="step">3</div>
+                </div>
+                <div class="activation-options" id="activation-options">
+                    <div class="option selected">
+                        <p>Votre compte</p>
+                        <div><span>Essai gratuit</span> <span>FMPC - FMPR</span></div>
+                        <button disabled>Sélectionné</button>
+                    </div>
+                    <div class="option">
+                        <p>Préparation pharmacie</p>
+                        <div><span>Concours d'accès à la 3ème année des études pharmaceutiques</span><span>FMPC -
+                                FMPR</span></div>
+                        <button>Sélectionner</button>
+                    </div>
+                </div>
+
+
+                <div id="uploadSection" class="upload-container">
+                    <h2>Finaliser votre activation</h2>
+                    <p class="warning-text">
+                        <strong>NB:</strong> votre fichier ne doit pas dépasser <strong>1Mo</strong>, sinon envoyez-le
+                        par <span style="color: red;">WhatsApp</span>.
+                    </p>
+                    <div class="upload-box" id="uploadBox">
+                        <span class="upload-icon">📂</span>
+                        <p>Déposez votre reçu de paiement ici, ou <a href="#" class="browse-link">Parcourir</a></p>
+                        <input type="file" id="fileUpload" class="file-input" />
+                    </div>
+                    <p id="fileName"></p>
+                </div>
+
+
+                <div class="nav-buttons">
+                    <button class="prev">Précédent</button>
+                    <button class="next">Suivant</button>
+                </div>
+            </div>
+
+            <div class="whatssapp" id="whatssapp">
+                <div class="whatsapp-activation">
+                    <h3>Activer via WhatsApp</h3>
+                    <ol>
+                        <li>Contactez-nous via le numéro suivant sur WhatsApp: 06 6 6666 66</li>
+                        <li>Envoyez une preuve de virement dans le RIB en dessous (image ou PDF)</li>
+                        <li>Activation de votre compte</li>
+                    </ol>
+                    <button class="whatsapp-button"><i class="fa-brands fa-whatsapp"></i> Contacter nous</button>
+                </div>
+
+                <div class="bank-details">
+                    <h4>Nos coordonnées</h4>
+                    <p>BANK: BANK X</p>
+                    <p>RIB: 1234567891234567</p>
+                </div>
+            </div>
+
+
+            <div class="payment-section" id="payment">
+                <h3>Votre abonnement</h3>
+                <div class="subscription-details">
+                    <div class="subscription-item">
+                        <span class="item-name">Préparation pharmacie</span>
+                        <span class="item-price">70.00 dhs</span>
+                    </div>
+                </div>
+                <div class="total-payment">
+                    <span>Total à payer</span>
+                    <span class="total-amount">70.00 dhs</span>
+                </div>
+                <p>Effectuer un virement vers le RIB suivant :</p>
+                <div class="bank-details">
+                    <label>Bank X :</label>
+                    <div class="bank-info">
+                        <span class="label">RIB</span>
+                        <input type="text" value="1234567891234567" readonly>
+                        <button class="copy-button">Copier</button>
+                    </div>
+                    <div class="bank-info">
+                        <span class="label">N° de compte</span>
+                        <input type="text" value="12345234567" readonly>
+                        <button class="copy-button">Copier</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="finish" id="finish">
+                <img src="./images/Timer.png" alt="Timer Icon">
+                <h3>Votre demande est bien enregistrée</h3>
+                <p>On va traiter votre virement dans une période au maximum 24h pour activer votre compte.</p>
+                <p class="thank-you">MERCI pour votre confiance</p>
+                <button class="quit-button">Quitter</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/Abbonement.js"></script>
+</body>
+</html>

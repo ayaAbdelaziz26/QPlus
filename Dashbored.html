@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/Dashbored.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dashboard</title>
+
+    <script>
+        function toggleDropdown(id) {
+            document.getElementById(id).classList.toggle("show");
+        }
+
+        function toggleModal(modalId) {
+            document.getElementById(modalId).classList.toggle("show-modal");
+        }
+
+        function toggleSidebar() {
+            document.querySelector(".sidebar").classList.toggle("active");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2 onclick="window.location='Dashbored.html'"><i class="fa-solid fa-table-columns"></i>DASHBORED</h2>
+        <ul>
+            <li onclick="toggleDropdown('semestres-menu')"><i class="fa-solid fa-caret-right"></i>SEMESTRES</li>
+            <ul id="semestres-menu" class="submenu">
+                <li onclick="toggleModal('semestreModal')">Ajouter Semestre</li>
+                <li onclick="window.location='GestionSemestre.html'">Gestion des Semestres</li>
+            </ul>
+            <li><i class="fa-solid fa-caret-right"></i>MODULES</li>
+            <li onclick="toggleDropdown('chapitres-menu')"><i class="fa-solid fa-caret-right"></i>CHAPITRES</li>
+            <ul id="chapitres-menu" class="submenu">
+                <li onclick="toggleModal('chapitreModal')">Ajouter Chapitre</li>
+                <li>Gestion des Chapitres</li>
+            </ul>
+            <li onclick="toggleDropdown('exams-menu')"><i class="fa-solid fa-caret-right"></i>GESTION DES EXAM</li>
+            <ul id='exams-menu' class="submenu">
+                <li onclick="toggleModal('examModal')">Ajouter Examen (Module)</li>
+                <li onclick="toggleModal('chapitreModalTwo')">Ajouter Examen (Chapitre)</li>
+                <li onclick="window.location='GestionModule.html'">Gestion des Examens (Module)</li>
+                <li>Gestion des Examens (Chapitre)</li>
+            </ul>
+            <li onclick="toggleDropdown('etuidant-menu')"><i class="fa-solid fa-caret-right"></i>GESTION ETUDIANTS</li>
+            <ul id='etuidant-menu' class="submenu">
+                <li onclick="toggleModal('studentModalTwo')">Ajouter Etuidant</li>
+                <li>Gestion Etuidant</li>
+            </ul>
+            <li onclick="window.location='Feedbacks.html'"><i class="fa-solid fa-caret-right"></i>FEEDBACKS</li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="top-nav">
+            <div class="left-side-btns">
+                <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+                <button class="btn" onclick="history.back()">Retour</button>
+            </div>
+            <span class="admin">Admin</span>
+        </div>
+
+        <div class="dashboard">
+            <div class="stats">
+                <div class="stat-card dark">
+                    <p>Total Etudiants</p>
+                    <h2>NULL</h2>
+                </div>
+                <div class="stat-card blue">
+                    <p>Total Abonnées</p>
+                    <h2>2742</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ajouter Semestre Modal -->
+    <div id="semestreModal" class="modal">
+        <h3>Ajouter Semestre</h3>
+        <input type="text" placeholder="Input Semestre">
+        <div class="modal-buttons">
+            <button class="btn" onclick="toggleModal('semestreModal')">Close</button>
+            <button class="btn">Add Now</button>
+        </div>
+    </div>
+
+    <!-- Ajouter Étudiant Modal -->
+    <div id="studentModal" class="modal">
+        <h3>Add New Student</h3>
+        <input type="text" placeholder="Input Semestre">
+        <div class="modal-buttons">
+            <button class="btn" onclick="toggleModal('studentModal')">Close</button>
+            <button class="btn">Add Now</button>
+        </div>
+    </div>
+
+    <!-- Ajouter Chapitre Modal -->
+    <div id="chapitreModal" class="modal">
+        <h3>Ajouter Chapitre</h3>
+        <label for="semestreSelect">Select Semestre</label>
+        <select id="semestreSelect" class="input-field">
+            <option>Select Semestre</option>
+        </select>
+
+        <label for="moduleSelect">Select Module</label>
+        <select id="moduleSelect" class="input-field">
+            <option>Select Module</option>
+        </select>
+
+        <label for="chapitreTitle">Chapitre Title</label>
+        <input type="text" id="chapitreTitle" class="input-field" placeholder="Input Chapitre Title">
+
+        <div class="modal-buttons">
+            <button class="btn" onclick="toggleModal('chapitreModal')">Close</button>
+            <button class="btn">Add Now</button>
+        </div>
+    </div>
+
+    <!-- Ajouter Examen (Module) Modal -->
+    <div id="examModal" class="modal">
+        <h3>Ajouter Un Examen (Module)</h3>
+        <label for="semestre">Select Semestre</label>
+        <select id="semestre" class="input-field">
+            <option>Select Semestre</option>
+        </select>
+
+        <label for="module">Select Module</label>
+        <select id="module" class="input-field">
+            <option>Select Module</option>
+        </select>
+
+        <label for="examTitle">Examen Title</label>
+        <input type="text" id="examTitle" class="input-field" placeholder="Input Exam Title">
+
+        <label for="examTime">Examen Time Limit</label>
+        <select id="examTime" class="input-field">
+            <option>Select time</option>
+        </select>
+
+        <label for="questionLimit">Nombre de Questions affichées</label>
+        <input type="number" id="questionLimit" class="input-field" placeholder="Input question limit to display">
+
+        <div class="modal-buttons">
+            <button class="btn close" onclick="toggleModal('examModal')">Close</button>
+            <button class="btn add">Add Now</button>
+        </div>
+    </div>
+
+
+    <!-- Ajouter Examen (Chapitre) Modal -->
+    <div id="chapitreModalTwo" class="modal">
+        <h3>Ajouter Un Examen (Module)</h3>
+        <label for="semestre">Select Semestre</label>
+        <select id="semestre" class="input-field">
+            <option>Select Semestre</option>
+        </select>
+
+        <label for="module">Select Module</label>
+        <select id="module" class="input-field">
+            <option>Select Module</option>
+        </select>
+
+        <label for="module">Select Chapitre</label>
+        <select id="module" class="input-field">
+            <option>Select Chapitre</option>
+        </select>
+
+        <label for="examTitle">Examen Title</label>
+        <input type="text" id="examTitle" class="input-field" placeholder="Input Exam Title">
+
+        <label for="examTime">Examen Time Limit</label>
+        <select id="examTime" class="input-field">
+            <option>Select time</option>
+        </select>
+
+        <label for="questionLimit">Nombre de Questions affichées</label>
+        <input type="number" id="questionLimit" class="input-field" placeholder="Input question limit to display">
+
+        <div class="modal-buttons">
+            <button class="btn close" onclick="toggleModal('chapitreModalTwo')">Close</button>
+            <button class="btn add">Add Now</button>
+        </div>
+    </div>
+
+
+
+    <!-- Ajouter Étudiant Modal -->
+    <div id="studentModalTwo" class="modal">
+        <h3>Ajouter Étudiant</h3>
+
+        <label for="fullname">Fullname</label>
+        <input type="text" id="fullname" class="input-field" placeholder="Input Fullname">
+
+        <label for="dob">Date de Naissance</label>
+        <input type="date" id="dob" class="input-field">
+
+        <label for="gender">Sexe</label>
+        <select id="gender" class="input-field">
+            <option>Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" class="input-field" placeholder="Input Email">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" class="input-field" placeholder="Input Password">
+
+        <div class="modal-buttons">
+            <button class="btn close" onclick="toggleModal('studentModalTwo')">Close</button>
+            <button class="btn add">Add Now</button>
+        </div>
+    </div>
+
+</body>
+</html>

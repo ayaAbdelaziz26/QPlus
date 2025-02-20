@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #A3C0F6;
+    margin: 0 15px;
+}
+
+a{
+    text-decoration: none;
+    margin: 0;
+    padding: 15px 0;
+    display: block;
+    font-size: 13px;
+    color: gray;
+    text-align: left;
+}
+
+.right-section p{
+    font-size: 13px;
+    color: gray;
+    padding: 7px;
+}
+
+.container {
+    display: flex;
+    background: white;
+    width: 800px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.left-section {
+    width: 50%;
+    background: #E6EEFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.right-section {
+    width: 50%;
+    padding: 40px;
+    text-align: center;
+}
+h2 {
+    color: #1A4DBE;
+    margin-bottom: 10px;
+}
+.input-box {
+    margin: 15px 0;
+    position: relative;
+}
+.input-box input {
+    width: 100%;
+    padding: 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.input-box i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+.login-btn {
+    background: #1A4DBE;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.social-login {
+    margin-top: 15px;
+}
+.social-login button {
+    border: none;
+    background: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.signup-link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.signup-link a {
+    color: #1A4DBE;
+    text-decoration: none;
+}
+
+.social-login button{
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.social-login i{
+    color: black;
+    font-size: 20px;
+    padding: 3px 8px;
+}
+
+.signup-link a{
+    display: inline;
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .left-section {
+        display: none;
+    }
+    .right-section {
+        width: 100%;
+    }
+    .container {
+        width: 90%;
+    }
+}

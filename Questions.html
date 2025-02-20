@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/Questions.css">
+    <link href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" rel="stylesheet">
+    <link href="https://cdn-uicons.flaticon.com/uicons-rounded-solid/css/uicons-rounded-solid.css" rel="stylesheet">
+    <link href="https://cdn-uicons.flaticon.com/uicons-rounded-bold/css/uicons-rounded-bold.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <title>Modules</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h2><span class="Q">q</span> <span class="plus">plus</span></h2>
+        <div class="close-sidebar"><i class="fa-solid fa-chevron-left"></i></div>
+
+        <ul>
+            <li onclick="location.href='Accueil.html'" class="active"><i
+                    class="fi fi-rr-layout-fluid"></i><span>Accueil</span></li>
+            <li onclick="location.href='Profile.html'"><i class="fi fi-rr-user-pen"></i><span> Profile</span></li>
+            <li onclick="location.href='Notes.html'"><i class="fi fi-rr-edit"></i><span> Notes</span></li>
+            <li onclick="location.href='Statistiques.html'"><i
+                    class="fi fi-rr-chart-histogram"></i><span>Statistiques</span></li>
+            <li onclick="location.href='Abbonement.html'"><i class="fi fi-rr-memo-pad"></i><span>Abonnement</span></li>
+            <li onclick="location.href='Support.html'"><i class="fi fi-rr-headset"></i><span>Support</span></li>
+            <li class="logout" style="color: red;" onclick="window.location='index.html'"><i class="fi fi-rr-sign-out-alt"></i><span>Logout</span></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <i class="fi fi-rr-bell notification"></i>
+            <div class="settings">
+                <i class="fi fi-rr-brightness"></i>
+                <div class="user">
+                    <i class="fi fi-rr-user"></i>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="questions-container">
+            <div class="header">
+                <div class="header-left">
+                    <div class="quiz-title">Des Questions de concours d’accès à la 3ᵉ année pharmacie</div>
+                    <div class="quiz-subtitle">FMPC - <strong>Biologie</strong></div>
+                </div>
+                <div class="timer-box">
+                    <span class="timer">00:01</span>
+                </div>
+            </div>
+
+            <!-- Quiz Content: Question & Answers -->
+            <div class="quiz-box">
+                <div class="question">
+
+                    <div class="question-box">
+                        <p>1- Question test Question test Question test :</p>
+
+                        <div class="tools">
+                            <div id="notes-btn"><i class="fa-regular fa-clipboard"></i></div>
+                            <div id="comments-btn"><i class="fi fi-rr-comments"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="answers">
+                    <label class="answer">
+                        <input type="checkbox"> A- Answer Test
+                    </label>
+                    <label class="answer">
+                        <input type="checkbox"> B- Answer Test
+                    </label>
+                    <label class="answer">
+                        <input type="checkbox"> C- Answer TestAnswer TestAnswer Test
+                    </label>
+                    <label class="answer">
+                        <input type="checkbox"> D- Answer TestAnswer Test
+                    </label>
+                    <label class="answer">
+                        <input type="checkbox"> E- Answer Test
+                    </label>
+                </div>
+                <div class="buttons">
+                    <button class="btn correct-btn">Corriger</button>
+                    <button class="switch-btn"><i class="fa-solid fa-repeat"></i></button>
+                    <button class="btn quiz-btn" id="concour">Concours FMPC 2023</button>
+                </div>
+            </div>
+
+
+            <div class="quiz-box">
+                <div class="question">
+
+                    <div class="question-box">
+                        <p>1- Question test Question test Question test :</p>
+
+                        <div class="tools">
+                            <div id="notes-btn"><i class="fa-regular fa-clipboard"></i></div>
+                            <div><i class="fi fi-rr-comments"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="answers">
+                    <label class="answer">
+                        <input type="checkbox"> A- Answer Test
+                    </label>
+                    <label class="answer">
+                        <input type="checkbox"> B- Answer Test
+                    </label>
+                    <label class="answer">
+                        <input type="checkbox"> C- Answer TestAnswer TestAnswer Test
+                    </label>
+                    <label class="answer">
+                        <input type="checkbox"> D- Answer TestAnswer Test
+                    </label>
+                    <label class="answer">
+                        <input type="checkbox"> E- Answer Test
+                    </label>
+                </div>
+                <div class="buttons">
+                    <button class="btn correct-btn">Corriger</button>
+                    <button class="switch-btn"><i class="fa-solid fa-repeat"></i></button>
+                    <button class="btn quiz-btn">Concours FMPC 2023</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="notes-panel" id="notesPanel">
+            <span class="close-btn" id="close-notes">✖</span>
+            <h2>Vos Notes</h2>
+            <input type="text" class="note-input" placeholder="Titre de la note">
+            <textarea class="note-input" placeholder="Écrire votre note"></textarea>
+            <button class="save-btn">Enregistrer</button>
+
+            <div class="notes-section">
+                <h3>les notes enrigistrees</h3>
+                <span>17/2/2025</span>
+
+                <div class="myNote">
+                    <div class="myNote-title">Note Title</div>
+                    <div class="myNote-body">
+                        this is body
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="comments-panel" id="commentsPanel">
+            <span class="close-btn" id="close-comments">✖</span>
+            <h2>Commentaires</h2>
+            <div class="comment">
+                <img src="" alt="">
+                <textarea class="comment-input" placeholder="Écrire votre commentaire"></textarea>
+            </div>
+            <button class="save-btn">Enregistrer</button>
+
+            <div class="comments-section">
+
+                <div class="title">
+                    <div class="profile">
+                        <div><i class="fi fi-rr-user"></i></div>
+                        <p>full name</p>
+                    </div>
+                    <span>17/2/2025</span>
+                </div>
+
+                <input class="comment-body" type="text">
+            </div>
+        </div>
+
+
+
+        <div class="quit-container" id="quit">
+            <div class="quit-box">
+
+                <div class="ask-box" id="leave-ask">
+                    <p>Voulez-vous vraiment quitter ce concours et aller vers cela !?</p>
+                    <span id="close-ask">✖</span>
+                </div>
+
+                <div class="quit-btns">
+                    <button class="non-button" id="non-btn">Non</button>
+                    <button class="quit-button" onclick="window.location='Concours.html'" id="quit-btn">Quitter vers ce concours</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/Questions.js"></script>
+</body>
+</html>

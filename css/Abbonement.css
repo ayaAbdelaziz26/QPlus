@@ -1,0 +1,606 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: 'Outfit';
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    width: 250px;
+    background: #fff;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    transition: width 0.3s ease;
+    box-sizing: content-box;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+    box-sizing: content-box;
+}
+
+.sidebar h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 .Q {
+    color: #173e7dff;
+    font-size: 46px;
+}
+
+h2 .plus {
+    color: #3b3b3b;
+    font-size: 40px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d1d1d1ff;
+    color: #173e7dff;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 15px 0;
+    transition: opacity 0.3s ease;
+
+}
+
+.sidebar.collapsed ul li span {
+    display: none;
+}
+
+.sidebar ul li i {
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.sidebar.collapsed ul li i {
+    font-size: 24px;
+}
+
+.sidebar.collapsed h2 .plus {
+    display: none;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+.sidebar ul li.active,
+.sidebar ul li:hover {
+    background: #173e7dff;
+    color: #fff;
+}
+
+.main-content {
+    width: 100%;
+}
+
+header {
+    background-color: #f4f4f4;
+    height: 80px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+header .settings {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+header i {
+    font-size: 35px;
+    color: #5d6b76;
+}
+
+.close-sidebar {
+    height: 25px;
+    width: 25px;
+    background-color: #173e7d;
+    border-radius: 50%;
+    position: absolute;
+    right: -7px;
+    top: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.main-content h2 {
+    color: #616161;
+    margin: 0;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    text-transform: capitalize;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    width: 100%;
+}
+
+.site-activation {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 60%;
+}
+
+.container h3 {
+    text-align: center;
+    color: #515151;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.step {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    background: #f4f4f4;
+    transition: 0.3s;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 6px solid #173e7d;
+    font-size: 25px;
+    font-weight: bold;
+    color: #173e7d;
+}
+
+.step.active {
+    background: #173e7d;
+    color: white;
+}
+
+.step button {
+    background: #173e7d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.step button:hover {
+    background: #0d2b5f;
+}
+
+.activation-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.activation-options .option {
+    background-color: #f4f7fc;
+    border-radius: 20px;
+    border: 1px solid gray;
+    width: 43%;
+    padding: 10px 0;
+}
+
+.activation-options .option p {
+    color: #173e7d;
+    font-weight: bold;
+    padding: 6px 0;
+    border-bottom: 1px solid gray;
+    margin: 0;
+}
+
+.activation-options .option div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.activation-options .option button {
+    padding: 7px 15px;
+    border-radius: 15px;
+    border: 0;
+    outline: 0;
+    background-color: rgb(210, 206, 206);
+    margin-top: 10px;
+    color: gray;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.activation-options .option button:hover {
+    background-color: #173e7d;
+    color: #fff;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.nav-buttons button{
+    font-weight: bold;
+    border: 0;
+    outline: 0;
+    padding: 7px 15px;
+    border-radius: 4px;
+}
+.prev {
+    background-color: rgb(210, 206, 206);
+    color: gray;
+}
+
+.next {
+    background-color: #173e7d;
+    color: #fff;
+}
+
+.whatssapp{
+    width: 30%;
+}
+
+.whatsapp-activation {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.4);
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 300px;
+}
+
+.whatsapp-activation ol li{
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+
+.whatsapp-button {
+    background: #11bc7e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 20px;
+}
+
+.whatsapp-button i {
+    font-size: 18px;
+}
+
+.bank-details {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+.payment-section {
+    background: #F5F8FC;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    display: none;
+}
+
+.payment-header {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #0C3D77;
+    margin-bottom: 15px;
+}
+
+.payment-header i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.subscription-item, .total-payment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid gray;
+    padding: 3px;
+    height: 50px;
+}
+
+.subscription-item .item-name{
+    color: #0C3D77;
+    font-weight: bold;
+}
+
+.payment-item {
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #E0E0E0;
+    margin-bottom: 10px;
+}
+
+.payment-item .price {
+    color: #28A745;
+    font-weight: bold;
+}
+
+.total-payment {
+    background: #D4F4E3;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #198754;
+    margin-bottom: 15px;
+}
+
+.total-payment span:first-child {
+    color: rgb(94, 92, 92);
+    font-weight: bold;
+}
+
+p{
+    margin: 0;
+    color: rgb(94, 92, 92);
+    font-weight: 600;
+}
+
+
+.bank-info {
+    display: flex;
+    justify-content: center;
+    padding: 7px 15px;
+    border-radius: 5px;
+    width: 100%;
+    align-items: center;
+}
+
+.bank-info input,.bank-info button{
+    height: 40px;
+}
+
+.bank-info button{
+    background-color: #003366;
+    border: 0;
+    outline: 0;
+    color: #fff;
+}
+
+.bank-info .label{
+    width: 50px;
+    padding-right:10px;
+    display: block;
+}
+
+label{
+    color: #003366;
+    padding: 5px;
+}
+
+.copy-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F0F0F0;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.copy-section i {
+    cursor: pointer;
+    color: #0C3D77;
+}
+
+
+
+.upload-container {
+    text-align: center;
+    background: #f8f9fc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.warning-text {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.upload-box {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.upload-box:hover {
+    background-color: #f0f0f0;
+}
+
+.upload-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.browse-link {
+    color: blue;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.file-input {
+    display: none;
+}
+
+.finish {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+.finish img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.finish h3 {
+    color: #003366;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.finish p {
+    color: #333;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.finish .thank-you {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.quit-button {
+    background-color: #009c5a;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.quit-button:hover {
+    background-color: #007a45;
+}
+
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+    background:#fff;
+    border-radius: 5px; 
+}
+
+
+::-webkit-scrollbar-thumb {
+    background:#173e7d; 
+    border-radius: 10px; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0056b3; 
+}
+
+@media(max-width:960px) {
+    header .settings {
+        gap: 20px;
+    }
+
+    .container{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .site-activation,.whatssapp{
+        width: 90%;
+    }
+
+    .payment-section{
+        width: 90%;
+    }
+
+    .finish{
+        width: 100%;
+    }
+
+}
+
+
+@media(max-width:550px) {
+    .activation-options{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .activation-options .option{
+        width: 70%;
+    }
+}

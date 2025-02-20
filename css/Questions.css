@@ -1,0 +1,512 @@
+body {
+    display: flex;
+    font-family: 'Outfit';
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    width: 250px;
+    background: #fff;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 .Q {
+    color: #173e7dff;
+    font-size: 46px;
+}
+
+h2 .plus {
+    color: #3b3b3b;
+    font-size: 40px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d1d1d1ff;
+    color: #173e7dff;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 15px 0;
+    transition: opacity 0.3s ease;
+
+}
+
+.sidebar.collapsed ul li span {
+    display: none;
+}
+
+.sidebar ul li i {
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.sidebar.collapsed ul li i {
+    font-size: 24px;
+}
+
+.sidebar.collapsed h2 .plus {
+    display: none;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+.sidebar ul li.active,
+.sidebar ul li:hover {
+    background: #173e7dff;
+    color: #fff;
+}
+
+.main-content {
+    width: 100%;
+}
+
+header {
+    background-color: #f4f4f4;
+    height: 80px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+header .settings {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+header i {
+    font-size: 35px;
+    color: #5d6b76;
+}
+
+.settings .user {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.questions-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Header: Title, Timer & Subtitle */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    width: 90%;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.quiz-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.quiz-subtitle {
+    font-size: 20px;
+    color: #555;
+    margin-top: 5px;
+}
+
+.timer-box {
+    width: 120px;
+    text-align: center;
+    background: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* Quiz Box: Question & Answers */
+.quiz-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* text-align: center; */
+    width: 90%;
+    margin-top: 20px;
+}
+
+.question {
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+.question-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tools div{
+    background-color: transparent;
+    border: 2px solid #d1d1d1;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.tools{
+    display: flex;
+    gap: 10px;
+}
+
+.tools div i{
+    color:#173e7d ;
+    font-weight: bold;
+}
+
+.answers {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.answer {
+    display: flex;
+    align-items: center;
+    background: #eee;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.answer input {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 25px;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.correct-btn {
+    background: #2c9f45;
+    color: white;
+}
+
+.quiz-btn {
+    background: #007bff;
+    color: white;
+}
+
+.switch-btn{
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #12b8ff;
+}
+
+.switch-btn i{
+    font-size: 15px;
+    color: #12b8ff;
+}
+
+
+.notes-panel {
+    position: fixed;
+    top: 0px;
+    left: -350px;
+    width: 250px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    transition: left 0.6s ease-in-out;
+    height: 100vh;
+}
+
+.notes-panel h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.note-input {
+    width: 93%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border: 2px solid #173e7d;
+    outline: 0;
+}
+
+.save-btn {
+    background-color: #173e7d;
+    color: white;
+    padding: 5px 12px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: red;
+}
+
+.notes-section{
+    border: 2px solid #d1d1d1;
+    margin-top: 20px;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.notes-section span{
+    font-size: 11px;
+    color: #4e4e4e;
+    padding: 5px
+}
+
+.myNote-title{
+    background-color: #173e7d;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+}
+
+.myNote{
+    border: 2px solid #173e7d;
+    height: 180px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.myNote-body{
+    padding: 10px;
+}
+
+
+.comments-panel {
+    position: fixed;
+    top: 0px;
+    right: -350px;
+    width: 250px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    transition: right 0.6s ease-in-out;
+    height: 100vh;
+}
+
+.comments-panel h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.comment-input {
+    width: 93%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border: 2px solid #173e7d;
+    outline: 0;
+}
+
+.comments-section{
+    border: 2px solid #d1d1d1;
+    margin-top: 20px;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.comments-section span{
+    font-size: 11px;
+    color: #4e4e4e;
+    padding: 5px
+}
+
+.comment-body{
+    padding: 10px;
+    border: 2px solid #173e7d;
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 90%;
+    outline: 0;
+}
+
+.comments-section .title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.comments-section .profile{
+    display: flex;
+    gap: 5px;
+}
+
+.comments-section .profile div{
+    width: 20px;
+    height: 21px;
+    border-radius: 50%;
+    border: 2px solid #173e7d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comments-section .profile p{
+    margin: 0;
+}
+
+.comments-section .profile div i{
+    font-size: 15px;
+    color:#173e7d;
+}
+
+.quit-container {
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.quit-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.quit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.quit-button:hover {
+    background-color: #0056b3;
+}
+
+.ask-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.ask-box span{
+    color: red;
+    cursor: pointer;
+}
+
+.non-button{
+    background-color: #565656;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.close-sidebar {
+    height: 25px;
+    width: 25px;
+    background-color: #173e7d;
+    border-radius: 50%;
+    position: absolute;
+    right: -7px;
+    top: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+    background:#fff;
+    border-radius: 5px; 
+}
+
+
+::-webkit-scrollbar-thumb {
+    background:#173e7d; 
+    border-radius: 10px; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0056b3; 
+}
