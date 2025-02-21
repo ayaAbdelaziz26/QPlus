@@ -1,16 +1,48 @@
 let menuItems = document.querySelectorAll(".sidebar ul li");
 
+// document.addEventListener("DOMContentLoaded", function () {
+//     let sidebar = document.querySelector(".sidebar");
+//     let closeSidebarBtn = document.querySelector(".close-sidebar");
+//     let isCollapsed = false;
+
+//     closeSidebarBtn.addEventListener("click", function () {
+//         isCollapsed = !isCollapsed;
+//         sidebar.classList.toggle("collapsed");
+//         isCollapsed ? closeSidebarBtn.innerHTML = '<i class="fa-solid fa-chevron-right"></i>' :
+//             closeSidebarBtn.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+//     });
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
-    // let menuItems = document.querySelectorAll(".sidebar ul li");
     let sidebar = document.querySelector(".sidebar");
     let closeSidebarBtn = document.querySelector(".close-sidebar");
-    let isCollapsed = false;
+    let isCollapsed = localStorage.getItem("sidebarCollapsed") === "true";
+
+    // Unhide the sidebar
+    sidebar.style.display = "block";
+
+    // Set the initial state of the sidebar based on the stored value
+    if (isCollapsed) {
+        sidebar.classList.add("collapsed");
+        closeSidebarBtn.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
+    } else {
+        sidebar.classList.remove("collapsed");
+        closeSidebarBtn.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+    }
 
     closeSidebarBtn.addEventListener("click", function () {
         isCollapsed = !isCollapsed;
         sidebar.classList.toggle("collapsed");
-        isCollapsed ? closeSidebarBtn.innerHTML = '<i class="fa-solid fa-chevron-right"></i>' :
+
+        // Update the button icon based on the new state
+        if (isCollapsed) {
+            closeSidebarBtn.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
+        } else {
             closeSidebarBtn.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+        }
+
+        // Save the state to localStorage
+        localStorage.setItem("sidebarCollapsed", isCollapsed);
     });
 });
 
