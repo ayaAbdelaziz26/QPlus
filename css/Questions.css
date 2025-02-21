@@ -99,21 +99,60 @@ header .settings {
     display: flex;
     align-items: center;
     gap: 50px;
+    position: relative;
 }
+
 
 header i {
     font-size: 35px;
     color: #5d6b76;
 }
 
-.settings .user {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: #fff;
+.dropdown i, .dropdown i{
+    font-size: 20px;
+}
+
+.mode-toggle, .user-toggle {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    width: 120px;
+    z-index: 100;
+}
+
+.mode-dropdown {
+    width: 140px;
+}
+
+.mode-option, .profile-option {
+    padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+.dark {
+    background: black;
+    color: white;
+    border-radius: 0 0 8px 8px;
+}
+
+.logout {
+    color: red;
 }
 
 .questions-container {
@@ -232,6 +271,7 @@ header i {
     margin-top: 15px;
     display: flex;
     gap: 25px;
+    align-items: center;
 }
 
 .btn {
@@ -239,16 +279,16 @@ header i {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .correct-btn {
-    background: #2c9f45;
+    background-color: #0eaf85;
     color: white;
 }
 
 .quiz-btn {
-    background: #007bff;
+    background: #173e7d;
     color: white;
 }
 
@@ -489,6 +529,32 @@ header i {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.last-btns{
+    margin: 25px;
+    display: flex;
+    gap: 5px;
+}
+
+.last-btns .corriger{
+    color: #fff;
+    background-color: #0eaf85;
+    border: 0;
+    padding: 10px 15px;
+    font-size: 22px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.last-btns .replace{
+    background-color: #00b3ff;
+    border: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #fff;
+    padding: 15px;
+    font-size: 22px;
 }
 
 ::-webkit-scrollbar {

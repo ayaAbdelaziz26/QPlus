@@ -38,26 +38,38 @@
     <div class="main-content">
         <header>
             <i class="fi fi-rr-bell notification"></i>
+        
             <div class="settings">
-                <i class="fi fi-rr-brightness"></i>
-                <div class="user">
-                    <i class="fi fi-rr-user"></i>
+                <!-- Mode Button -->
+                <div class="mode-toggle">
+                    <i class="fi fi-rr-brightness" id="mode-btn"></i>
+                    <div class="dropdown mode-dropdown">
+                        <div class="mode-option" id="light-mode">
+                            <i class="fi fi-rr-sun"></i> light mode
+                        </div>
+                        <div class="mode-option dark" id="dark-mode">
+                            <i class="fi fi-rr-moon"></i> dark mode
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Profile Button -->
+                <div class="user-toggle">
+                    <i class="fi fi-rr-user" id="profile-btn"></i>
+                    <div class="dropdown profile-dropdown">
+                        <div class="profile-option">
+                            <i class="fi fi-rr-user"></i> Profile
+                        </div>
+                        <div class="profile-option logout">
+                            <i class="fi fi-rr-sign-out-alt"></i> Logout
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
 
 
         <div class="questions-container">
-            <div class="header">
-                <div class="header-left">
-                    <div class="quiz-title">Des Questions de concours d’accès à la 3ᵉ année pharmacie</div>
-                    <div class="quiz-subtitle">FMPC - <strong>Biologie</strong></div>
-                </div>
-                <div class="timer-box">
-                    <span class="timer">00:01</span>
-                </div>
-            </div>
-
             <!-- Quiz Content: Question & Answers -->
             <div class="quiz-box">
                 <div class="question">
@@ -131,6 +143,11 @@
                     <button class="btn quiz-btn">Concours FMPC 2023</button>
                 </div>
             </div>
+
+            <div class="last-btns">
+                <button class="corriger">corriger tous</button>
+                <button class="replace"><i class="fa-solid fa-repeat"></i></button>
+            </div>
         </div>
 
 
@@ -196,7 +213,7 @@
             </div>
         </div>
     </div>
-
+    <script src="./js/headerSidebar.js"></script>
     <script src="./js/Questions.js"></script>
 </body>
 </html>

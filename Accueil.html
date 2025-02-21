@@ -39,13 +39,36 @@
     <div class="main-content">
         <header>
             <i class="fi fi-rr-bell notification"></i>
+        
             <div class="settings">
-                <i class="fi fi-rr-brightness"></i>
-                <div class="user">
-                    <i class="fi fi-rr-user"></i>
+                <!-- Mode Button -->
+                <div class="mode-toggle">
+                    <i class="fi fi-rr-brightness" id="mode-btn"></i>
+                    <div class="dropdown mode-dropdown">
+                        <div class="mode-option" id="light-mode">
+                            <i class="fi fi-rr-sun"></i> light mode
+                        </div>
+                        <div class="mode-option dark" id="dark-mode">
+                            <i class="fi fi-rr-moon"></i> dark mode
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Profile Button -->
+                <div class="user-toggle">
+                    <i class="fi fi-rr-user" id="profile-btn"></i>
+                    <div class="dropdown profile-dropdown">
+                        <div class="profile-option">
+                            <i class="fi fi-rr-user"></i> Profile
+                        </div>
+                        <div class="profile-option logout">
+                            <i class="fi fi-rr-sign-out-alt"></i> Logout
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
+        
 
 
         <div class="containerOne" id="container-one">
@@ -81,6 +104,7 @@
             </div>
         </div>
     </div>
+    <script src="./js/headerSidebar.js"></script>
     <script src="./js/Accueil.js"></script>
 </body>
 

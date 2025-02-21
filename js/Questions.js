@@ -1,8 +1,3 @@
-let fmpcBtn = document.getElementById('FMPC');
-let fmprBtn = document.getElementById('FMPR');
-let imgElement = document.getElementById('myImg');
-let cityElement = document.getElementById('city')
-let menuItems = document.querySelectorAll(".sidebar ul li");
 var notesPanel = document.getElementById("notesPanel");
 let notesElement = document.getElementById('notes-btn')
 let closeBtnNotes = document.getElementById('close-notes')
@@ -13,27 +8,6 @@ let concourBtn = document.getElementById('concour');
 let quitElement = document.getElementById('quit');
 let closeAskBtn=document.getElementById('close-ask');
 let nonBtn=document.getElementById('non-btn');
-
-document.addEventListener("DOMContentLoaded", function () {
-    let sidebar = document.querySelector(".sidebar");
-    let closeSidebarBtn = document.querySelector(".close-sidebar");
-    let isCollapsed = false;
-
-    closeSidebarBtn.addEventListener("click", function () {
-        isCollapsed = !isCollapsed;
-        sidebar.classList.toggle("collapsed");
-        isCollapsed ? closeSidebarBtn.innerHTML = '<i class="fa-solid fa-chevron-right"></i>' :
-            closeSidebarBtn.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
-    });
-});
-
-
-menuItems.forEach((item) => {
-    item.addEventListener('click', function () {
-        menuItems.forEach(li => li.classList.remove("active"));
-        this.classList.add("active");
-    })
-})
 
 
 notesElement.addEventListener('click', function () {
