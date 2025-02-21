@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +18,7 @@
         rel="stylesheet">
     <title>Modules</title>
 </head>
+
 <body>
     <div class="sidebar" style="display: none;">
         <h2><span class="Q">q</span> <span class="plus">plus</span></h2>
@@ -31,7 +33,8 @@
                     class="fi fi-rr-chart-histogram"></i><span>Statistiques</span></li>
             <li onclick="location.href='Abbonement.html'"><i class="fi fi-rr-memo-pad"></i><span>Abonnement</span></li>
             <li onclick="location.href='Support.html'"><i class="fi fi-rr-headset"></i><span>Support</span></li>
-            <li class="logout" style="color: red;" onclick="window.location='index.html'"><i class="fi fi-rr-sign-out-alt"></i><span>Logout</span></li>
+            <li class="logout" style="color: red;" onclick="window.location='index.html'"><i
+                    class="fi fi-rr-sign-out-alt"></i><span>Logout</span></li>
         </ul>
     </div>
 
@@ -39,7 +42,7 @@
 
         <header>
             <i class="fi fi-rr-bell notification"></i>
-        
+
             <div class="settings">
                 <!-- Mode Button -->
                 <div class="mode-toggle">
@@ -53,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-        
+
                 <!-- Profile Button -->
                 <div class="user-toggle">
                     <i class="fi fi-rr-user" id="profile-btn"></i>
@@ -69,80 +72,81 @@
             </div>
         </header>
 
-    <div class="container">
-        <h2>Modules</h2>
-        <div class="modules">
-            <div class="subjectCard" id="subject-card" onclick="window.location='Questions.html'">
-                <h3>BIOLOGIE</h3>
+        <div class="container">
+            <h2>Modules</h2>
+            <div class="modules">
+                <div class="subjectCard" id="subject-card" onclick="window.location='Questions.html'">
+                    <h3>BIOLOGIE</h3>
 
-                <div class="subjectCardEntire">
-                    <div>
-                        <img src="./images/BiologieOne.png" alt="Biologie Icon">
-                    </div>
-
-                    <div>
-                        <div class="progress-container">
-                            <svg class="progress-circle" width="50" height="50">
-                                <circle cx="25" cy="25" r="22" stroke="#ddd" stroke-width="4" fill="none"></circle>
-                                <circle class="progress" cx="25" cy="25" r="22" stroke="#003366" stroke-width="6"
-                                    fill="none" stroke-dasharray="138" stroke-dashoffset="64"></circle>
-                            </svg>
-                            <span class="progress-text">53%</span>
+                    <div class="subjectCardEntire">
+                        <div>
+                            <img src="./images/BiologieOne.png" alt="Biologie Icon">
                         </div>
-                        <p class="progression-text">Votre progression</p>
-                    </div>
-                </div>
-                <p class="question-num">120 Questions</p>
-            </div>
 
-            <div class="subjectCard">
-                <h3>CHIMIE</h3>
-
-                <div class="subjectCardEntire">
-                    <div>
-                        <img src="./images/Chimie.png" alt="Biologie Icon">
-                    </div>
-
-                    <div>
-                        <div class="progress-container">
-                            <svg class="progress-circle" width="50" height="50">
-                                <circle cx="25" cy="25" r="22" stroke="#ddd" stroke-width="4" fill="none"></circle>
-                                <circle class="progress" cx="25" cy="25" r="22" stroke="#003366" stroke-width="6"
-                                    fill="none" stroke-dasharray="138" stroke-dashoffset="64"></circle>
-                            </svg>
-                            <span class="progress-text">53%</span>
+                        <div>
+                            <div class="progress-container">
+                                <svg class="progress-circle" width="50" height="50">
+                                    <circle cx="25" cy="25" r="22" stroke="#ddd" stroke-width="4" fill="none"></circle>
+                                    <circle class="progress" cx="25" cy="25" r="22" stroke="#003366" stroke-width="6"
+                                        fill="none" stroke-dasharray="138" stroke-dashoffset="64"></circle>
+                                </svg>
+                                <span class="progress-text">53%</span>
+                            </div>
+                            <p class="progression-text">Votre progression</p>
                         </div>
-                        <p class="progression-text">Votre progression</p>
                     </div>
+                    <p class="question-num">120 Questions</p>
                 </div>
-                <p class="question-num">120 Questions</p>
-            </div>
 
-            <div class="subjectCard">
-                <h3>BIOLOGIE</h3>
+                <div class="subjectCard">
+                    <h3>CHIMIE</h3>
 
-                <div class="subjectCardEntire">
-                    <div>
-                        <img src="./images/BiologieTwo.png" alt="Biologie Icon">
-                    </div>
-
-                    <div>
-                        <div class="progress-container">
-                            <svg class="progress-circle" width="50" height="50">
-                                <circle cx="25" cy="25" r="22" stroke="#ddd" stroke-width="4" fill="none"></circle>
-                                <circle class="progress" cx="25" cy="25" r="22" stroke="#003366" stroke-width="6"
-                                    fill="none" stroke-dasharray="138" stroke-dashoffset="64"></circle>
-                            </svg>
-                            <span class="progress-text">53%</span>
+                    <div class="subjectCardEntire">
+                        <div>
+                            <img src="./images/Chimie.png" alt="Biologie Icon">
                         </div>
-                        <p class="progression-text">Votre progression</p>
+
+                        <div>
+                            <div class="progress-container">
+                                <svg class="progress-circle" width="50" height="50">
+                                    <circle cx="25" cy="25" r="22" stroke="#ddd" stroke-width="4" fill="none"></circle>
+                                    <circle class="progress" cx="25" cy="25" r="22" stroke="#003366" stroke-width="6"
+                                        fill="none" stroke-dasharray="138" stroke-dashoffset="64"></circle>
+                                </svg>
+                                <span class="progress-text">53%</span>
+                            </div>
+                            <p class="progression-text">Votre progression</p>
+                        </div>
                     </div>
+                    <p class="question-num">120 Questions</p>
                 </div>
-                <p class="question-num">120 Questions</p>
+
+                <div class="subjectCard">
+                    <h3>BIOLOGIE</h3>
+
+                    <div class="subjectCardEntire">
+                        <div>
+                            <img src="./images/BiologieTwo.png" alt="Biologie Icon">
+                        </div>
+
+                        <div>
+                            <div class="progress-container">
+                                <svg class="progress-circle" width="50" height="50">
+                                    <circle cx="25" cy="25" r="22" stroke="#ddd" stroke-width="4" fill="none"></circle>
+                                    <circle class="progress" cx="25" cy="25" r="22" stroke="#003366" stroke-width="6"
+                                        fill="none" stroke-dasharray="138" stroke-dashoffset="64"></circle>
+                                </svg>
+                                <span class="progress-text">53%</span>
+                            </div>
+                            <p class="progression-text">Votre progression</p>
+                        </div>
+                    </div>
+                    <p class="question-num">120 Questions</p>
+                </div>
             </div>
         </div>
     </div>
-    </div>
     <script src="./js/headerSidebar.js"></script>
 </body>
+
 </html>

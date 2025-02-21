@@ -1,6 +1,6 @@
 body {
     display: flex;
-    font-family:'Outfit';
+    font-family: 'Outfit';
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -11,7 +11,7 @@ body {
     background: #fff;
     color: white;
     min-height: 100vh;
-    padding: 20px;
+    padding: 10px;
     position: relative;
     transition: width 0.3s ease;
 }
@@ -108,11 +108,13 @@ header i {
     color: #5d6b76;
 }
 
-.dropdown i, .dropdown i{
+.dropdown i,
+.dropdown i {
     font-size: 20px;
 }
 
-.mode-toggle, .user-toggle {
+.mode-toggle,
+.user-toggle {
     position: relative;
     cursor: pointer;
 }
@@ -135,7 +137,8 @@ header i {
     width: 140px;
 }
 
-.mode-option, .profile-option {
+.mode-option,
+.profile-option {
     padding: 10px;
     display: flex;
     align-items: center;
@@ -169,14 +172,14 @@ header i {
     cursor: pointer;
 }
 
-.main-content h2{
+.main-content h2 {
     color: #616161;
     margin: 0;
     padding: 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.container{
+.container {
     display: flex;
     margin: 30px;
     align-items: flex-start;
@@ -186,34 +189,35 @@ header i {
     flex-wrap: wrap;
 }
 
-.container .left-side{
+.container .left-side {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 40%;
 }
 
-.container .left-side-option{
+.container .left-side-option {
     border-left: 4px solid rgb(225, 222, 222);
     padding: 8px;
     cursor: pointer;
 }
 
-.container .left-side-option.active-option{
+.container .left-side-option.active-option {
     border-left: 4px solid #1e88e5;
 }
 
-.container .left-side h4,.container .left-side p{
+.container .left-side h4,
+.container .left-side p {
     margin: 0;
 }
 
-.container .right-side{
+.container .right-side {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.container .right-side .profile{
+.container .right-side .profile {
     height: 110px;
     width: 110px;
     border-radius: 50%;
@@ -223,29 +227,29 @@ header i {
     justify-content: center;
 }
 
-.container .right-side .profile i{
+.container .right-side .profile i {
     font-size: 60px;
     color: #a3a3a3;
 }
 
-.right-side .field{
+.right-side .field {
     display: flex;
     align-items: center;
     gap: 50px;
     margin-top: 30px;
 }
 
-.right-side .field .inputOne{
+.right-side .field .inputOne {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.right-side .field .inputOne label span{
+.right-side .field .inputOne label span {
     color: red;
 }
 
-.right-side .field .inputOne input{
+.right-side .field .inputOne input {
     height: 40px;
     width: 250px;
     border-radius: 5px;
@@ -254,7 +258,7 @@ header i {
     padding: 0 10px;
 }
 
-.save-btn{
+.save-btn {
     background-color: #1e88e5;
     padding: 15px;
     border-radius: 5px;
@@ -266,33 +270,33 @@ header i {
 }
 
 ::-webkit-scrollbar {
-    width: 10px; 
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background:#fff;
-    border-radius: 5px; 
+    background: #fff;
+    border-radius: 5px;
 }
 
 
 ::-webkit-scrollbar-thumb {
-    background:#173e7d; 
-    border-radius: 10px; 
+    background: #173e7d;
+    border-radius: 10px;
 }
 
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #0056b3; 
+    background: #0056b3;
 }
 
 @media(max-width:1388px) {
-    .container .left-side{
+    .container .left-side {
         width: 100%;
     }
 }
 
 @media(max-width:960px) {
-    .right-side .field{
+    .right-side .field {
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -302,13 +306,13 @@ header i {
         gap: 20px;
     }
 
-    .container .left-side{
+    .container .left-side {
         width: 100%;
     }
 }
 
 @media(max-width:550px) {
-    .right-side .field .inputOne input{
+    .right-side .field .inputOne input {
         width: 150px;
     }
 }

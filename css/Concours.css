@@ -11,7 +11,7 @@ body {
     background: #fff;
     color: white;
     min-height: 100vh;
-    padding: 20px;
+    padding: 10px;
     position: relative;
     transition: width 0.3s ease;
 }
@@ -108,11 +108,13 @@ header i {
     color: #5d6b76;
 }
 
-.dropdown i, .dropdown i{
+.dropdown i,
+.dropdown i {
     font-size: 20px;
 }
 
-.mode-toggle, .user-toggle {
+.mode-toggle,
+.user-toggle {
     position: relative;
     cursor: pointer;
 }
@@ -135,7 +137,8 @@ header i {
     width: 140px;
 }
 
-.mode-option, .profile-option {
+.mode-option,
+.profile-option {
     padding: 10px;
     display: flex;
     align-items: center;
@@ -184,7 +187,7 @@ header i {
     height: 300px;
 }
 
-.subjectCard h3{
+.subjectCard h3 {
     color: #173e7d;
     font-weight: bold;
     font-size: 35px;
@@ -211,7 +214,7 @@ header i {
     height: 100px;
 }
 
-.subjectCardEntire{
+.subjectCardEntire {
     display: flex;
     justify-content: space-around;
     height: 100%;
@@ -219,13 +222,13 @@ header i {
     padding: 15px 0;
 }
 
-.progression-text{
+.progression-text {
     color: #999999;
     font-weight: bold;
     font-size: 12px;
 }
 
-.question-num{
+.question-num {
     color: #565656;
     font-size: 18px;
     font-weight: 400;
@@ -273,23 +276,23 @@ header i {
 }
 
 ::-webkit-scrollbar {
-    width: 10px; 
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background:#fff;
-    border-radius: 5px; 
+    background: #fff;
+    border-radius: 5px;
 }
 
 
 ::-webkit-scrollbar-thumb {
-    background:#173e7d; 
-    border-radius: 10px; 
+    background: #173e7d;
+    border-radius: 10px;
 }
 
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #0056b3; 
+    background: #0056b3;
 }
 
 @media(max-width:960px) {
@@ -298,7 +301,7 @@ header i {
         align-items: center;
     }
 
-    .subjectCard{
+    .subjectCard {
         width: 100%;
     }
 }

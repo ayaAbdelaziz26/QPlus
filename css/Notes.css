@@ -1,6 +1,6 @@
 body {
     display: flex;
-    font-family:'Outfit';
+    font-family: 'Outfit';
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -11,7 +11,7 @@ body {
     background: #fff;
     color: white;
     min-height: 100vh;
-    padding: 20px;
+    padding: 10px;
     position: relative;
     transition: width 0.3s ease;
 }
@@ -108,11 +108,13 @@ header i {
     color: #5d6b76;
 }
 
-.dropdown i, .dropdown i{
+.dropdown i,
+.dropdown i {
     font-size: 20px;
 }
 
-.mode-toggle, .user-toggle {
+.mode-toggle,
+.user-toggle {
     position: relative;
     cursor: pointer;
 }
@@ -135,7 +137,8 @@ header i {
     width: 140px;
 }
 
-.mode-option, .profile-option {
+.mode-option,
+.profile-option {
     padding: 10px;
     display: flex;
     align-items: center;
@@ -169,7 +172,7 @@ header i {
     cursor: pointer;
 }
 
-.main-content h2{
+.main-content h2 {
     color: #616161;
     margin: 0;
     padding: 20px;
@@ -192,14 +195,14 @@ header i {
     margin: 0 15px;
 }
 
-.notes-notlogged{
+.notes-notlogged {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.notes-notlogged h3{
+.notes-notlogged h3 {
     text-align: center;
     color: red;
     padding: 10px;
@@ -235,11 +238,13 @@ header i {
     display: none;
 
 }
+
 h2 {
     color: #4a5568;
     font-size: 18px;
     margin-bottom: 10px;
 }
+
 .search-bar {
     display: flex;
     justify-content: space-between;
@@ -247,44 +252,49 @@ h2 {
     padding: 10px;
     border-radius: 4px;
 }
+
 .search-bar input {
     border: none;
     padding: 10px;
     width: 30%;
     border-radius: 15px;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
-th, td {
+
+th,
+td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
+
 th {
     background-color: #cbd5e0;
 }
 
 ::-webkit-scrollbar {
-    width: 10px; 
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background:#fff;
-    border-radius: 5px; 
+    background: #fff;
+    border-radius: 5px;
 }
 
 
 ::-webkit-scrollbar-thumb {
-    background:#173e7d; 
-    border-radius: 10px; 
+    background: #173e7d;
+    border-radius: 10px;
 }
 
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #0056b3; 
+    background: #0056b3;
 }
 
 
@@ -294,11 +304,11 @@ th {
         gap: 20px;
     }
 
-    .card{
+    .card {
         width: 90%;
     }
 
-    .card button{
+    .card button {
         width: 70%;
     }
 }

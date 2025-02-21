@@ -1,18 +1,5 @@
 let menuItems = document.querySelectorAll(".sidebar ul li");
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     let sidebar = document.querySelector(".sidebar");
-//     let closeSidebarBtn = document.querySelector(".close-sidebar");
-//     let isCollapsed = false;
-
-//     closeSidebarBtn.addEventListener("click", function () {
-//         isCollapsed = !isCollapsed;
-//         sidebar.classList.toggle("collapsed");
-//         isCollapsed ? closeSidebarBtn.innerHTML = '<i class="fa-solid fa-chevron-right"></i>' :
-//             closeSidebarBtn.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
-//     });
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
     let sidebar = document.querySelector(".sidebar");
     let closeSidebarBtn = document.querySelector(".close-sidebar");

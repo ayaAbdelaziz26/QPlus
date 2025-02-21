@@ -1,13 +1,13 @@
-let optionOneElement=document.getElementById('optionOne');
-let optionTwoElement=document.getElementById('optionTwo');
+let optionOneElement = document.getElementById('optionOne');
+let optionTwoElement = document.getElementById('optionTwo');
 
 
-optionOneElement.addEventListener('click',function(){
+optionOneElement.addEventListener('click', function () {
     optionOneElement.classList.add('active-option')
     optionTwoElement.classList.remove('active-option')
 })
 
-optionTwoElement.addEventListener('click',function(){
+optionTwoElement.addEventListener('click', function () {
     optionTwoElement.classList.add('active-option')
     optionOneElement.classList.remove('active-option')
 })
@@ -85,4 +85,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-

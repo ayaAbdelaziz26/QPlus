@@ -6,8 +6,8 @@ let commentsElement = document.getElementById('comments-btn')
 let noteParentElement = document.getElementById('noteParent')
 let concourBtn = document.getElementById('concour');
 let quitElement = document.getElementById('quit');
-let closeAskBtn=document.getElementById('close-ask');
-let nonBtn=document.getElementById('non-btn');
+let closeAskBtn = document.getElementById('close-ask');
+let nonBtn = document.getElementById('non-btn');
 
 
 notesElement.addEventListener('click', function () {
@@ -15,7 +15,7 @@ notesElement.addEventListener('click', function () {
         notesPanel.style.left = "0";
         noteParentElement.style.display = 'block';
     } else {
-        notesPanel.style.left = "-350px"; // Slide out of view
+        notesPanel.style.left = "-350px";
         noteParentElement.style.display = 'none';
     }
 })
@@ -41,15 +41,15 @@ closeBtnComments.addEventListener('click', function () {
 concourBtn.addEventListener('click', function () {
     quitElement.style.display = 'flex';
     disableScrolling();
-    
+
 })
 
-closeAskBtn.addEventListener('click',function(){
-    quitElement.style.display='none';
+closeAskBtn.addEventListener('click', function () {
+    quitElement.style.display = 'none';
 })
 
-nonBtn.addEventListener('click',function(){
-    quitElement.style.display='none';
+nonBtn.addEventListener('click', function () {
+    quitElement.style.display = 'none';
     document.body.style.overflow = "auto";
 })
 
